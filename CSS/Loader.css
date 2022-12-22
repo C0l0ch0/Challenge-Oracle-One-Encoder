@@ -1,0 +1,63 @@
+.mainLoader{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 1em 5em 1em 10em 1em 5em;
+    grid-template-areas:
+                        ". . ."
+                        ". welcomeText ."
+                        ". . ."
+                        ". mainAnimation ."
+                        ". . ."
+                        ". loopAnimation .";
+}
+
+.welcomeText{
+    grid-area: welcomeText;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100%;
+    grid-template-areas:
+                        "aluraLogo welcome .";
+}
+
+.aluraLogo{
+    grid-area: aluraLogo;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.aluraImg{
+    width: 3em;
+    height: 1.5em;
+}
+
+.welcome{
+    grid-area: welcome;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wTextValue{
+    font-size: 2em;
+}
+
+.mainAnimation{
+    grid-area: mainAnimation;
+    width: 100%;
+    height: 100%;
+}
+
+.loopAnimation{
+    grid-area: loopAnimation;
+    width: 100%;
+    height: 100%;
+}

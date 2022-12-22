@@ -1,0 +1,16 @@
+html{
+    margin: 0; 
+    padding: 0;
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+
+    font-family: 'Andika', sans-serif;
+
+    color: #0A3871;
+    
+}
+
+body{
+    background-color: #E5E5E5;
+}
