@@ -17,7 +17,19 @@ function startLoader(element, length){
         setTimeout( function(){ 
             document.getElementById("mainLoader").style.opacity = '0'; 
             document.getElementById("mainLoader").style.display = "none";
-        }, 1000)
+            document.getElementById("roadpie").style.display = "none";
+        }, 1000);
+
+        setTimeout( function(){ 
+            document.getElementById("mainEncoder").style.display = "grid";
+            document.getElementById("mainEncoder").style.opacity = '0'; 
+            
+            setTimeout(function(){
+                document.getElementById("mainEncoder").style.opacity = '1';
+                document.getElementById("roadpie").style.display = "flex";
+            }, 500);
+
+        }, 1500);
     }
         
     element.style.strokeDashoffset = length;

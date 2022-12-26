@@ -1,0 +1,50 @@
+.mainEncoder{
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 5% 55% 35% 5%;
+    grid-template-rows: 1em 5em 1em 12em 1em 5em 1em;
+    grid-template-areas:
+                        ". . . ."
+                        "aluraLogo encoderBody encoderResult ."
+                        ". encoderBody encoderResult ."
+                        ". encoderBody encoderResult ."
+                        ". . . ."
+                        ". encodeDecodeBox copyBox ."
+                        ". . . .";
+    transition: opacity 1s;
+}
+
+.encoderBody{
+    grid-area: encoderBody;
+    width: 100%;
+    height: 100%;
+}
+
+.encoderResult{
+    grid-area: encoderResult;
+    width: 100%;
+    height: 100%;
+}
+
+.encodeDecodeBox{
+    grid-area: encodeDecodeBox;
+    width: 100%;
+    height: 100%;
+}
+
+.copyBox{
+    grid-area: copyBox;
+    width: 100%;
+    height: 100%;
+}
+
+.roadpie{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 0.4em;
+    align-items: center;
+    justify-content: center;
+}
