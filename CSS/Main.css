@@ -7,12 +7,12 @@ html{
 
     font-family: 'Andika', sans-serif;
 
-    color: #d0d8e7;
+    color: #EEEEFF;
     
 }
 
 body{
     background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,121,116,1) 200%);
+    background: radial-gradient(circle,  rgba(159,183,152,1) 0%, rgba(40,88,123,1) 140%);
     font-family: 'Andika', sans-serif;
 }

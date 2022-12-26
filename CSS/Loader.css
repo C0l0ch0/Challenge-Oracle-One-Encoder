@@ -88,12 +88,16 @@
 }
 .circleLoader{
     fill: transparent;
-    stroke: rgba(9, 121, 116, 0.61);
-    stroke-width: 1.8em;
+    stroke: rgba(100, 136, 138, 0.61);
+    stroke-width: 1.9em;
     stroke-dasharray: 471;
     stroke-dashoffset: 471;
     transform: rotate(-90deg);
     transform-origin: center;
+}
+
+.lock{
+    color: #65715380;;
 }
 
 .lock > .fas {

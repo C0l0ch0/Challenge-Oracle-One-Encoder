@@ -3,16 +3,16 @@
     opacity: 0;
     width: 100%;
     height: auto;
-    grid-template-columns: 5% 55% 35% 5%;
+    grid-template-columns: 4% 1% 50% 5% 35% 5%;
     grid-template-rows: 1em 5em 1em 12em 1em 5em 1em;
     grid-template-areas:
-                        ". . . ."
-                        "aluraLogo encoderBody encoderResult ."
-                        ". encoderBody encoderResult ."
-                        ". encoderBody encoderResult ."
-                        ". . . ."
-                        ". encodeDecodeBox copyBox ."
-                        ". . . .";
+                        ". . . . . ."
+                        "aluraLogo . encoderBody . encoderResult ."
+                        ". . encoderBody . encoderResult ."
+                        ". . encoderBody . encoderResult ."
+                        ". . . . . ."
+                        ". . encodeDecodeBox . copyBox ."
+                        ". . . . . .";
     transition: opacity 1s;
 }
 
@@ -33,7 +33,7 @@
 .textToProcess{
     font-size: 0.8em;
     resize: none;
-    background-color: rgba(9, 121, 116, 0.342);
+    background-color: rgba(159, 180, 199, 0.342);
     border-radius: 0.5em;
     border: none;
     box-shadow: 10px 5px 5px black;
@@ -75,13 +75,13 @@
 
 .encodeButton{
     padding: 0.5em 1.8em 0.5em 1.8em;
-    background-color: #0A3871;
-    color: white;
+    background-color: #657153;
+    color: #bec2c7;
 }
 
 .decodeButton{
     background-color: #bec2c7;
-    color: #0A3871;
+    color: #657153;
 }
 
 .copyBox{
@@ -97,5 +97,5 @@
     font-size: 0.4em;
     align-items: center;
     justify-content: center;
-    color: #a2a3a5;
+    color: #EEEEFF;
 }
