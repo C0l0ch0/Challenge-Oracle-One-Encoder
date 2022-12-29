@@ -60,6 +60,59 @@ function loaderTextChange(){
     
 }
 
+function startEncript(){
+    var textToEncript = document.getElementById("textToProcess").value;
+
+    cleanResult();
+
+    if (textToEncript.length != 0){
+
+        setTimeout( function(){ 
+            document.getElementById("noMessageBox").style.opacity = '0'; 
+            document.getElementById("noMessageBox").style.display = "none";
+        }, 500);
+
+        setTimeout( function(){ 
+            document.getElementById("textResultBox").style.opacity = '1'; 
+            document.getElementById("textResultBox").style.display = "block";
+        }, 500);
+
+        setTimeout( function(){ 
+
+            for (const charToCheck of textToEncript.toLowerCase()){
+                
+                switch (charToCheck){
+                    case 'e':
+                        printToResult('enter');
+                        break;
+                    case 'i':
+                        printToResult('imes');
+                        break;
+                    case 'a':
+                        printToResult('ai');
+                        break;
+                    case 'o':
+                        printToResult('ober');
+                        break;
+                    case 'u':
+                        printToResult('ufat');
+                        break;
+                    default:
+                        printToResult(charToCheck);
+                }
+            }
+        }, 500)
+    }
+}
+
+function cleanResult(){
+    document.getElementById("textResultToProcess").value = "";
+}
+
+function printToResult(charToPrint){
+    console.log(charToPrint);
+    document.getElementById("textResultToProcess").value += charToPrint;
+}
 
 document.onreadystatechange = function(){
     if(document.readyState=='loaded' || document.readyState=='complete'){

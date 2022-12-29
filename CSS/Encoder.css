@@ -64,6 +64,7 @@
     box-shadow: 10px 5px 5px black;
     border-radius: 0.5em;
     border: none;
+    transition: opacity 1s;
 }
 
 .imageSearchBox,
@@ -97,6 +98,8 @@
     width: 100%;
     height: 100%;
     display: none;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .encodeButton,
@@ -108,6 +111,7 @@
     text-align: center;
     border-radius: 1em;
     font-family: 'Andika', sans-serif;
+    cursor: pointer;
 }
 
 .encodeButton{
@@ -116,9 +120,19 @@
     color: #bec2c7;
 }
 
+.encodeButton:hover{
+    background-color: #49523d;
+    color: #d8dce0;
+}
+
 .decodeButton{
     background-color: #bec2c7;
     color: #657153;
+}
+
+.decodeButton:hover{
+    background-color: #d8dce0;
+    color: #49523d;
 }
 
 .copyBox{
