@@ -154,7 +154,7 @@ document.onreadystatechange = function(){
 
         loaderText = document.getElementById("wTextValue");
 
-        textInterval = setInterval(loaderTextChange, 100);
+        textInterval = setInterval(loaderTextChange, 95);
 
         startLoader(canvas, pathLength);
     }
