@@ -53,7 +53,6 @@ function loaderTextChange(){
 
     encriptedText = (Math.random() + 1).toString(36).slice(2, (12-textIndex)).toUpperCase();
 
-    console.log(welcomeTxt.substring(0, textIndex));
     resultText =  welcomeTxt.substring(0, textIndex) + encriptedText;
 
     loaderText.innerText = resultText;
@@ -67,15 +66,7 @@ function startEncript(){
 
     if (textToEncript.length != 0){
 
-        setTimeout( function(){ 
-            document.getElementById("noMessageBox").style.opacity = '0'; 
-            document.getElementById("noMessageBox").style.display = "none";
-        }, 500);
-
-        setTimeout( function(){ 
-            document.getElementById("textResultBox").style.opacity = '1'; 
-            document.getElementById("textResultBox").style.display = "block";
-        }, 500);
+        hideImageShowResult();
 
         setTimeout( function(){ 
 
@@ -103,6 +94,41 @@ function startEncript(){
             }
         }, 500)
     }
+}
+
+function startDecript(){
+    var textToDecript = document.getElementById("textToProcess").value;
+
+    cleanResult();
+
+    if (textToDecript.length != 0){
+        
+        hideImageShowResult();
+
+        textToDecript = textToDecript.replaceAll('enter','e');
+
+        textToDecript = textToDecript.replaceAll('imes','i');
+
+        textToDecript = textToDecript.replaceAll('ai','a');
+
+        textToDecript = textToDecript.replaceAll('ober','o');
+
+        textToDecript = textToDecript.replaceAll('ufat','u');
+
+        printToResult(textToDecript);
+    }
+}
+
+function hideImageShowResult(){
+    setTimeout( function(){ 
+        document.getElementById("noMessageBox").style.opacity = '0'; 
+        document.getElementById("noMessageBox").style.display = "none";
+    }, 500);
+
+    setTimeout( function(){ 
+        document.getElementById("textResultBox").style.opacity = '1'; 
+        document.getElementById("textResultBox").style.display = "block";
+    }, 500);
 }
 
 function cleanResult(){
