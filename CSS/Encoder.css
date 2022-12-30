@@ -104,7 +104,8 @@
 }
 
 .encodeButton,
-.decodeButton{
+.decodeButton,
+.copyButton{
     border: none;
     font-size: 0.7em;
     padding: 0.5em 1em 0.5em 1em;
@@ -126,12 +127,14 @@
     color: #d8dce0;
 }
 
-.decodeButton{
+.decodeButton,
+.copyButton{
     background-color: #bec2c7;
     color: #657153;
 }
 
-.decodeButton:hover{
+.decodeButton:hover,
+.copyButton:hover{
     background-color: #d8dce0;
     color: #49523d;
 }
@@ -140,6 +143,9 @@
     grid-area: copyBox;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .roadpie{

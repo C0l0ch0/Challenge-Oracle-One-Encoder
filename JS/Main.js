@@ -48,7 +48,6 @@ function loaderTextChange(){
 
     if (!(textCounter % 6)){
         textIndex++;
-        console.log("" + textCounter);
     }
 
     encriptedText = (Math.random() + 1).toString(36).slice(2, (12-textIndex)).toUpperCase();
@@ -119,6 +118,15 @@ function startDecript(){
     }
 }
 
+function copyText(){
+    var textToCopy = document.getElementById("textResultToProcess");
+    textToCopy.disabled = false;
+    textToCopy.select();
+    document.execCommand('copy');
+    document.getSelection().removeAllRanges();
+    textToCopy.disabled = true;
+}
+
 function hideImageShowResult(){
     setTimeout( function(){ 
         document.getElementById("noMessageBox").style.opacity = '0'; 
@@ -136,7 +144,6 @@ function cleanResult(){
 }
 
 function printToResult(charToPrint){
-    console.log(charToPrint);
     document.getElementById("textResultToProcess").value += charToPrint;
 }
 
