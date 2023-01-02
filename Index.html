@@ -4,9 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encoder</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Alura Encoder</title>
+
+    <link rel="stylesheet" href=".\CSS\Main.css">
+    <link rel="stylesheet" href=".\CSS\Loader.css">
+    <link rel="stylesheet" href=".\CSS\Encoder.css">
+
+    <!-- Google fonts Andika Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andika&family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/9c3dfb853a.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
+    <header></header>
+    <main>
+
+        <!--Start of loader-->
+        <div class="mainLoader" id="mainLoader">
+
+            <div class="welcomeText">
     
+                <div class="aluraLogo">
+                    <img src="./img/Logo.png" alt="" class="aluraImg">
+                </div>
+    
+                <div class="welcome">
+                    <p class="wTextValue" id="wTextValue">Bienvenido</p>
+                </div>
+            </div>
+
+            <div class="mainAnimation">
+                <div class="mainLockAnimation">
+
+                    <div class="lock">
+                        <div class="fas fa-lock fa-2x" id="lock-animation"></div>
+                    </div>
+                    <div class="ringToFill">
+                        <!--canvas id="circleLoader" class="circleLoader" cx="50%" cy="50%" r="75"></canvas-->
+                        <svg class="svgCircleLoader">
+                            <circle class="circleLoader" id="circleLoader" cx="50%" cy="50%" r="75" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loopAnimation">
+                <div class="loopAnimationContainer">
+                    <ul class="stage">
+                        <li class="dot1"></li>
+                        <li class="dot2"></li>
+                        <li class="dot3"></li>
+                        <li class="dot4"></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+        <!--End of loader-->
+    </main>
+
+    <!--Start of main encoder-->
+    <div class="mainEncoder" id="mainEncoder">
+        <div class="aluraLogo">
+            <img src="./img/Logo.png" alt="" class="aluraImg">
+        </div>
+        <div class="encoderBody">
+            <div class="textBoxArea">
+                <textarea class="textToProcess" name="textToProcess" id="textToProcess" autocomplete="off" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+        </div>
+        <div class="encoderResult">
+            <div class="noMessageBox" id="noMessageBox">
+                <div class="imageSearchBox">
+                    <img src=".\img\muñeco.png" class="imageSearch" alt="">
+                </div>
+                <div class="noMessageHeaderBox">
+                    <p class="noMessageHeader">Ningún mensaje fue encontrado</p>
+                </div>
+                <div class="noMessageDescBox">
+                    <p class="noMessageDesc">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+            <div class="textResultBox" id="textResultBox">
+                <div class="textResultBoxArea">
+                    <textarea class="textResultToProcess" name="textResultToProcess" id="textResultToProcess" disabled="true"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="encodeDecodeBox">
+            <div class="encodeButtonBox">
+                <button class="encodeButton" onclick="startEncript()">Encriptar</button>
+            </div>
+            <div class="decodeButtonBox">
+                <button class="decodeButton" onclick="startDecript()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="copyBox">
+            <button class="copyButton" onclick="copyText()">Copiar</button>
+        </div>
+    </div>
+    <!--End of main encoder-->
+    <footer>
+        <div class="roadpie" id="roadpie">
+            <p>Desarrollado por: Alexander Pérez</p>
+        </div>
+    </footer>
 </body>
 </html>
+
+<script src="./JS/Main.js"></script>
